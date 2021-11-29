@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дат</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="./js/libs/luxon.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="hideTimer" id="startCalculator">Калькулятор</button>
+        <button onclick="hideCalc" id="startTimer">Таймер</button>
+    </div>
+    <div id="chooseCalc">
+        <h2>Калькулятор дат</h2>
+        <form id="calcDate">
+            <label for="dateFrom">
+                Первая дата:
+                <input type="date" name="dateFrom" id="dateFrom">
+            </label>
+            <label for="dateTo">
+                Вторая дата:
+                <input type="date" name="dateTo" id="dateTo">
+            </label>
+            <button type="submit">Рассчитать промежуток</button>
+        </form>
+        <p id="output">
+        </p>
+    </div>
+    <div id="chooseTimer">
+        <h2>Таймер</h2>
+        <input type="text" name="time" id="time">
+        <button id="button" onclick="clockStart()">Запустить</button>
+        <div id="timer"></div>
+    </div>
+</body>
+</html>
